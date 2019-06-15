@@ -1,0 +1,89 @@
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.navbar-nav {
+  .active {
+    a {
+      color: $text;
+      font-weight: 700;
+      border-bottom: 2px solid $text;
+
+      @include media-breakpoint-down(md) {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: 20px;
+  }
+}
+
+.banner {
+  font-family: "Merriweather", serif;
+  background-image: linear-gradient(rgba(28, 104, 214, 0.25), rgba(28, 104, 214, 0.25)), url("../images/alter.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+  .dropdown-menu {
+    border-radius: 0;
+    word-wrap: none;
+  }
+
+  .container {
+    max-width: 1500px;
+  }
+
+  .navbar-toggler {
+    background: $text;
+    border-radius: 0;
+  }
+
+  .social {
+    font-size: 2rem;
+
+    a {
+      color: $text;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.nav-link {
+  margin-right: 15px;
+  letter-spacing: 1px;
+  color: #fff;
+
+  &:hover {
+    color: $text;
+    font-weight: 700;
+    border-bottom: 2px solid $text;
+
+    @include media-breakpoint-down(md) {
+      border-bottom: 0;
+    }
+  }
+}
+
+.nav-item {
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}

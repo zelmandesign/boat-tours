@@ -1,0 +1,14 @@
+.page-header {
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 75px;
+
+  .display-3 {
+    text-shadow: 1px 1px 1px rgba(61, 0, 0, 0.45);
+
+    @include media-breakpoint-down(md) {
+      font-size: 3rem;
+    }
+  }
+}

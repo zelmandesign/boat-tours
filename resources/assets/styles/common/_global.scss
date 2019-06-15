@@ -1,0 +1,262 @@
+body {
+  font-family: "Merriweather", serif;
+  font-size: 1em;
+  color: $text;
+}
+
+a {
+  color: darken($color: $blue, $amount: 10);
+
+  &:hover {
+    color: $navy;
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+}
+
+p {
+  font-size: 18px;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.bt-img-shadow {
+  -webkit-box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+  -moz-box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+  box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+}
+
+#main {
+  height: 700px;
+  background-image: url("../images/main.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+  h1 {
+    color: #fff;
+    font-size: 6rem;
+    text-shadow: 1px 1px 1px rgba(61, 0, 0, 0.45);
+
+    @include media-breakpoint-down(md) {
+      font-size: 4rem;
+    }
+  }
+
+  hr {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    border: 0;
+    border-top: 3px solid #fff;
+    width: 350px;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px rgba(61, 0, 0, 0.45);
+
+    @include media-breakpoint-down(md) {
+      font-size: 2rem;
+    }
+  }
+
+  .btn {
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 550px;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+#verbiage {
+  padding: 70px 0 50px 0;
+  font-size: 22px;
+  font-family: "Merriweather", serif;
+  line-height: 38px;
+
+  hr {
+    width: 350px;
+    margin-top: 25px;
+  }
+}
+
+#mid-verbiage {
+  padding: 80px 0;
+  font-size: 22px;
+  font-family: "Merriweather", serif;
+  line-height: 38px;
+
+  hr {
+    width: 350px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid $text;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+}
+
+#contact-us {
+  .line {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 3.25rem;
+    border: 0;
+    border-top: 3px solid $text;
+    width: 50px;
+  }
+
+  .social {
+    font-size: 2.5rem;
+
+    a {
+      color: darken($color: $blue, $amount: 10);
+
+      &:hover {
+        color: $navy;
+      }
+    }
+  }
+}
+
+#tours {
+  background: #e9f6f9;
+  padding: 80px 0 50px 0;
+  background-image: linear-gradient(rgba(28, 104, 214, 0.25), rgba(28, 104, 214, 0.25)), url("../images/testimonials5.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  @include media-breakpoint-down(md) {
+    background-attachment: scroll;
+  }
+
+  .card {
+    border: 0;
+
+    .card-img-overlay {
+      background: linear-gradient(rgba(28, 104, 214, 0.15), rgba(28, 104, 214, 0.15));
+      border-radius: 1rem;
+
+      hr {
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        border: 0;
+        border-top: 2px solid #fff;
+        width: 50px;
+      }
+    }
+
+    .card-img {
+      border-radius: 1rem;
+      -webkit-box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+      -moz-box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+      box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+    }
+  }
+}
+
+#testimonials {
+  margin-top: 75px;
+  padding: 60px 0;
+  background-image: linear-gradient(rgba(28, 104, 214, 0.25), rgba(28, 104, 214, 0.25)), url("../images/testimonials5.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 1rem 1rem 0 0;
+
+  @include media-breakpoint-down(sm) {
+    background: #769ec7;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    color: #fff;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.75rem;
+    }
+  }
+
+  .carousel-indicators,
+  .carousel-control-prev,
+  .carousel-control-next {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .carousel-item {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background-size: cover !important;
+    background-position: center top !important;
+    min-height: 300px;
+
+    @include media-breakpoint-down(md) {
+      min-height: 350px;
+    }
+
+    .carousel-caption {
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: initial;
+      background: #e9f6f9;
+      border-radius: 1rem;
+      padding: 30px;
+      text-align: left;
+      color: $text;
+      -webkit-box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+      -moz-box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+      box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+
+      .text {
+        font-family: "Merriweather", serif;
+      }
+    }
+  }
+}
+
+.home {
+  #testimonials {
+    margin-top: 15px;
+  }
+}
+
+.tours {
+  .rates {
+    font-weight: 700;
+  }
+
+  .line2 {
+    display: block;
+    margin-top: 2.5rem;
+    margin-bottom: 3.25rem;
+    border: 0;
+    border-top: 3px solid $text;
+    width: 50px;
+  }
+}
